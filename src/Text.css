@@ -1,0 +1,11 @@
+.Text {
+  color: rgb(129, 27, 192);
+  font-family: "Helvetica", sans-serif;
+  padding: 1rem 1rem 2rem;
+  margin: 2rem auto;
+  background-color: rgba(0, 210, 100, 0.2);
+  text-transform: uppercase;
+  border-radius: 10px;
+  text-align: center;
+  width: 30%;
+}

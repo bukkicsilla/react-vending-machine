@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
+import Text from "./Text";
 const SparklingWater = () => {
   return (
     <div>
-      <h2>Sparkling Water makes your day</h2>
       <iframe
         src="https://giphy.com/embed/37QGsYyVuSKZdhd2IF"
         width="480"
@@ -10,9 +10,12 @@ const SparklingWater = () => {
         class="giphy-embed"
         allowFullScreen
       ></iframe>
-      <div className="back">
-        <Link to="/">Go back</Link>
-      </div>
+      <Text>
+        <h2>It makes your day</h2>
+        <Link className="back" to="/">
+          Go back
+        </Link>
+      </Text>
     </div>
   );
 };
