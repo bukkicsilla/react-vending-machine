@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import VendingMachine from "./VendingMachine";
+import DietCoke from "./DietCoke";
+import SparklingWater from "./SparklingWater";
+import OrangeJuice from "./OrangeJuice";
+import Oreo from "./Oreo";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
+import NavBar from "./NavBar";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route exact path="/" element={<VendingMachine />} />
+          <Route path="/diet-coke" element={<DietCoke />} />
+          <Route path="/sparkling-water" element={<SparklingWater />} />
+          <Route path="/orange-juice" element={<OrangeJuice />} />
+          <Route path="/oreo" element={<Oreo />} />
+          <Route path="*" element={<h1>404 Not Found</h1>} />
+        </Routes>
+      </BrowserRouter>
+      {/*<VendingMachine />
+      <DietCoke />
+      <SparklingWater />
+  <OrangeJuice />*/}
     </div>
   );
 }
